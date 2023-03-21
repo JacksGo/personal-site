@@ -75,6 +75,7 @@
       background-image: linear-gradient(31.55deg, #FFF, #FFF 30%, transparent 70%, transparent);
       background-size: 550% 100%;
       background-position: top right;
+      background-repeat: no-repeat;
       color: #fff;
       flex-grow: 1;
       text-align: center;
@@ -120,11 +121,21 @@
 
 @media screen and (max-width: 600px) {
   .container {
-    padding: 0rem 0rem;
+    padding: 0rem 1rem 0 1rem;
+    margin: 0;
+    box-sizing: content-box;
+    width: 100%;
+
+    .scrollSection {
+      margin: -1rem;
+      margin-block-end: -0.5rem;
+      gap: 1.5rem;
+      padding: 0 1rem;
+    }
   }
 
   .header {
-    margin: 2rem 1rem 0 1rem;
+    margin: 3rem 1rem 0 1rem;
   }
 
   .actionTray {
