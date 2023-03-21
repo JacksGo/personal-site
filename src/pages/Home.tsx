@@ -6,7 +6,7 @@ import QuestCard from '../components/cards/QuestCard';
 import HealCard from '../components/cards/HealCard';
 import PaletCard from '../components/cards/PaletCard';
 
-import styles from './home.module.scss';
+import styles from './Home.module.scss';
 
 const App = () => {
   return <>
