@@ -32,7 +32,7 @@ const QuestPage = () => {
             In developing the Pods feature, I took on a role that was equal parts manager and engineer. I met with members of the design team to discuss their mockups and provide suggestions, worked with the product team to assess the technical implications of the features they were requesting, and coordinated with other engineers to ensure that the work was completed on time. I held weekly status meetings with stakeholders to update them on our progress, and ran daily standups with the back-end engineers assigned to Pods to ensure that any blockers they encountered were eliminated as quickly as possible. Meanwhile, I was solely responsible for developing the front-end UI for the feature.
           </p>
           <p>
-            I completed the last of the development work on Pods in mid-December 2022. Later that day, it was announced that Heal had been acquired and much of the engineering team, myself included, was being laid off. Despite my time with Heal coming to an abrupt end, I look forward to carrying the extensive experience I gained at the company into my next professional opportunity.
+            I completed the last of the development work on Pods in mid-December 2022. Later that day, it was announced that Heal had been acquired and much of the engineering team, myself included, was being laid off. Despite my time with Heal coming to an abrupt end, I look forward to carrying the extensive experience I gained at the company onward into my next professional opportunity.
           </p>
         </article>
       </section>

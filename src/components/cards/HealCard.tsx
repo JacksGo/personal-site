@@ -16,7 +16,7 @@ const HealCard = () => {
       <div className={styles.outline} aria-hidden="true">
         <HealLogo />
       </div>
-      <div className={styles.color} aria-hidden="true">
+      <div className={styles.fill} aria-hidden="true">
         <HealLogo />
       </div>
     </button>
