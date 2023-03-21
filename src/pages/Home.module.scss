@@ -1,0 +1,13 @@
+.container {
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  box-sizing: border-box;
+  min-width: min(calc(400px + 4rem), 100%);
+  width: calc(1200px + 6rem);
+  max-width: calc(100% - 2rem);
+}

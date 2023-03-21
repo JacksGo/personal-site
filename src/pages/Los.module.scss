@@ -1,0 +1,13 @@
+@use './Page.module.scss';
+
+.container {
+  @media (prefers-reduced-motion: no-preference) {
+    view-transition-name: los-card;
+  }
+}
+
+.header {
+  background-image: url("los_bg.png");
+  background-size: cover;
+  background-position: 50% 25%;
+}

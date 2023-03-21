@@ -1,0 +1,15 @@
+@use './Page.module.scss';
+
+.container {
+  @media (prefers-reduced-motion: no-preference) {
+    view-transition-name: markus-card;
+  }
+}
+
+.header {
+  background: white;
+
+  :global(#flag) {
+    fill: #f00;
+  }
+}

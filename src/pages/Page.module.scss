@@ -1,0 +1,133 @@
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 2rem 1rem;
+  width: calc(900px + 6rem);
+  gap: 2.5rem;
+  max-width: calc(100% - 2rem);
+  max-height: 100vh;
+  max-height: 100dvh;
+  font-size: 110%;
+
+  .scrollSection {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    overflow-y: auto;
+  
+    .header {
+      cursor: pointer;
+      border-radius: 1rem;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 166px;
+      box-sizing: border-box;
+
+      svg {
+        height: 102px;
+      }
+    }
+  
+    .content {
+      flex: 1 1;
+      padding: 0 1rem;
+      line-height: 1.5;
+      font-weight: 400;
+  
+      p {
+        margin-block: 1.5em;
+  
+        &:first-child {
+          margin-block-start: 0;
+        }
+  
+        &:last-child {
+          margin-block-end: 0;
+        }
+      }
+    }
+  }
+
+  .actionTray {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    box-sizing: border-box;
+    padding-inline: 1rem;
+
+    .action {
+      appearance: none;
+      background: transparent;
+      font-family: inherit;
+      font-size: inherit;
+      outline: none;
+      cursor: pointer;
+      font-weight: bold;
+
+      border: 2px solid #FFF;
+      padding: 1rem;
+      border-radius: 1rem;
+      background-image: linear-gradient(31.85deg, #FFF, #FFF 30%, transparent 70%, transparent);
+      background-size: 550% 100%;
+      background-position: top right;
+      color: #fff;
+      flex-grow: 1;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.25s ease-in, color 0.25s ease-in;
+
+      @media (prefers-reduced-motion: reduce) {
+        background: black;
+      
+        &:hover, &:focus-visible {
+          background: white;
+          color: black;
+        }
+      }
+      
+      &:nth-child(1) {
+        border: none;
+
+        @media screen and (min-width: 400px) {
+          flex: 0 0 25%;
+        }
+
+        &:only-child {
+          flex: 0 0 100%;
+        }
+      }
+
+      &:hover, &:focus-visible {
+        background-position: top left;
+        color: #000;
+      }
+    }
+    
+    .actionDivider {
+      width: 0;
+      margin: 1rem 0;
+      flex: 0 0;
+      border-right: 1px solid white;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 0rem 0rem;
+  }
+
+  .header {
+    margin: 2rem 1rem 0 1rem;
+  }
+
+  .actionTray {
+    padding-block-end: 1rem;
+  }
+}

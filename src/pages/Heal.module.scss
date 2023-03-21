@@ -1,0 +1,25 @@
+@use './Page.module.scss';
+
+.container {
+  @media (prefers-reduced-motion: no-preference) {
+    view-transition-name: heal-card;
+  }
+}
+
+.header {
+  background: white;
+
+  :global {
+    #wordmark {
+      fill: #00D2DC;
+    }
+  
+    #heart_bottom {
+      fill: url(#a);
+    }
+
+    #heart_top {
+      fill: url(#b);
+    }
+  }
+}

@@ -1,0 +1,207 @@
+.card {
+  padding: 0;
+  appearance: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  width: min(400px, 100%);
+  aspect-ratio: 1.61;
+  display: grid;
+  place-items: stretch;
+  grid-template: 1fr / 1fr;
+  text-decoration: none;
+  border-radius: 1rem;
+
+  @media (prefers-reduced-motion: no-preference) {
+    opacity: 0;
+    // animation: appear 1.25s ease-in forwards;
+    animation: appear 750ms ease-in forwards;
+
+    // @for $i from 1 through 6 {
+    //   &:nth-child(#{$i}) { animation-delay: ($i - 1) * 150ms; }
+    // }
+  }
+}
+
+@keyframes appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.outline, .color {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 86px;
+  grid-area: 1 / 1;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  svg {
+    max-width: calc(100% - 4rem);
+    max-height: calc(100% - 4rem);
+  }
+}
+
+.outline {
+  border: 2px solid white;
+  color: white;
+  -webkit-text-stroke: 2px #FFF;
+  -webkit-text-fill-color: #000;
+  paint-order: markers stroke fill;
+
+  svg {
+    fill: #000;
+    stroke: #FFF;
+  }
+}
+
+.color {
+  background-size: cover;
+  mask-image: linear-gradient(31.85deg, #FFF, #FFF 30%, transparent 70%, transparent);
+  mask-size: 550% 100%;
+  mask-position: top right;
+  transition: mask-position 0.35s ease-in-out;
+
+  @media (prefers-reduced-motion: reduce) {
+    mask-image: none;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+
+    .card:hover &, .card:focus-visible & {
+      opacity: 1;
+    }
+  }
+
+  svg {
+    stroke: transparent;
+
+    // Subtracting an extra 2px on each side to compensate for the missing stroke.
+    // If this wasn't added, when the card is smaller than the logo, the .color version
+    // of the logo would appear slightly larger than its .outline counterpart, since
+    // the browser uses the rendered width to scale down the graphic.
+    max-width: calc(100% - 4rem - 4px);
+    max-height: calc(100% - 4rem - 4px);
+  }
+  
+  .card:hover &, .card:focus-visible & {
+    mask-position: top left;
+  }
+}
+
+.los {
+  .color {
+    background-image: url("los_bg.png");
+    view-transition-name: los-card;
+
+    svg {
+      fill: #000;
+    }
+  }
+}
+
+.quest {
+  .color {
+    background: #FFF;
+    view-transition-name: quest-card;
+    
+    svg {
+      fill: #000;
+    }
+  }
+}
+
+.markus {
+  .color {
+    background: #FFF;
+    view-transition-name: markus-card;
+
+    :global(#flag) {
+      fill: red;
+    }
+  }
+
+  svg {
+    fill: #000;
+  }
+}
+
+.heal {
+  .outline {
+    stroke: #FFF;
+    fill: #000;
+  }
+
+  .color {
+    background: #FFF;
+    view-transition-name: heal-card;
+
+    :global {
+      #wordmark {
+        fill: #00D2DC;
+      }
+    
+      #heart_bottom {
+        fill: url(#a);
+      }
+
+      #heart_top {
+        fill: url(#b);
+      }
+    }
+  }
+}
+
+.palet {
+  position: relative;
+
+  .outline {
+    opacity: 0.25;
+
+    stroke: #FFF;
+    fill: #000;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 110%;
+      height: 2px;
+      background: #FFF;
+      transform-origin: center;
+      transform: rotate(-30.85deg);
+      box-shadow: 0 0 0 8px #000;
+    }
+
+    :global {
+      #grayscale {
+        display: block;
+      }
+
+      #colors {
+        display: none;
+      }
+    }
+  }
+
+  .color {
+    display: none;
+    background: white;
+    view-transition-name: palet-card;
+  }
+}
+
+// Using non-scaling-stroke ensures that when the cards are smaller than
+// 400px, the scaling of the svg doesn't cause the width of the strokes
+// to decrease and no longer match the border width of the card.
+svg {
+  path {
+    stroke-width: 4;
+    vector-effect: non-scaling-stroke;
+    paint-order: markers stroke fill;
+  }
+}
