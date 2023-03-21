@@ -30,7 +30,7 @@
   to { opacity: 1; }
 }
 
-.outline, .color {
+.outline, .fill {
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -59,9 +59,9 @@
   }
 }
 
-.color {
+.fill {
   background-size: cover;
-  mask-image: linear-gradient(31.85deg, #FFF, #FFF 30%, transparent 70%, transparent);
+  mask-image: linear-gradient(31.55deg, #FFF, #FFF 30%, transparent 70%, transparent);
   mask-size: 550% 100%;
   mask-position: top right;
   transition: mask-position 0.35s ease-in-out;
@@ -80,7 +80,7 @@
     stroke: transparent;
 
     // Subtracting an extra 2px on each side to compensate for the missing stroke.
-    // If this wasn't added, when the card is smaller than the logo, the .color version
+    // If this wasn't added, when the card is smaller than the logo, the .fill version
     // of the logo would appear slightly larger than its .outline counterpart, since
     // the browser uses the rendered width to scale down the graphic.
     max-width: calc(100% - 4rem - 4px);
@@ -93,7 +93,7 @@
 }
 
 .los {
-  .color {
+  .fill {
     background-image: url("/los_bg.png");
     view-transition-name: los-card;
 
@@ -104,7 +104,7 @@
 }
 
 .quest {
-  .color {
+  .fill {
     background: #FFF;
     view-transition-name: quest-card;
     
@@ -115,7 +115,7 @@
 }
 
 .markus {
-  .color {
+  .fill {
     background: #FFF;
     view-transition-name: markus-card;
 
@@ -135,7 +135,7 @@
     fill: #000;
   }
 
-  .color {
+  .fill {
     background: #FFF;
     view-transition-name: heal-card;
 
@@ -156,26 +156,9 @@
 }
 
 .palet {
-  position: relative;
-
   .outline {
-    opacity: 0.25;
-
     stroke: #FFF;
     fill: #000;
-    position: relative;
-
-    &::before {
-      position: absolute;
-      content: "";
-      display: block;
-      width: 110%;
-      height: 2px;
-      background: #FFF;
-      transform-origin: center;
-      transform: rotate(-30.85deg);
-      box-shadow: 0 0 0 8px #000;
-    }
 
     :global {
       #grayscale {
@@ -188,10 +171,35 @@
     }
   }
 
-  .color {
-    display: none;
+  .fill {
     background: white;
     view-transition-name: palet-card;
+  }
+}
+
+.disabled {
+  cursor: not-allowed;
+
+  .outline {
+    opacity: 0.25;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 105%;
+      height: 2px;
+      border-radius: 1px;
+      background: #FFF;
+      transform-origin: center;
+      transform: rotate(-31.55deg);
+      box-shadow: 0 0 0 0.5rem #000;
+    }
+  }
+
+  .fill {
+    display: none;
   }
 }
 

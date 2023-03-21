@@ -23,7 +23,7 @@ const QuestCard = () => {
       <div className={styles.outline} aria-hidden="true">
         <QuestLogo />
       </div>
-      <div className={styles.color} aria-hidden="true">
+      <div className={styles.fill} aria-hidden="true">
         <QuestLogo />
       </div>
     </button>
