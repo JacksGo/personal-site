@@ -11,7 +11,7 @@ import styles from './Home.module.scss';
 const App = () => {
   return <>
     <Helmet>
-      <title>Portfolio - Jackson Golletz</title>
+      <title>Jackson Golletz</title>
     </Helmet>
     <div className={styles.container}>
       <QuestCard />
