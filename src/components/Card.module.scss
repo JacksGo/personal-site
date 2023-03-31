@@ -16,8 +16,7 @@
 
   @media (prefers-reduced-motion: no-preference) {
     opacity: 0;
-    // animation: appear 1.25s ease-in forwards;
-    animation: appear 750ms ease-in forwards;
+    animation: appear 250ms ease forwards;
 
     // @for $i from 1 through 6 {
     //   &:nth-child(#{$i}) { animation-delay: ($i - 1) * 150ms; }
@@ -26,7 +25,6 @@
 }
 
 @keyframes appear {
-  from { opacity: 0; }
   to { opacity: 1; }
 }
 
