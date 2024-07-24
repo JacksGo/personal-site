@@ -24,7 +24,7 @@ const EbayPage = () => {
           </header>
           <article className={styles.content}>
             <p>
-              eBay is a global, online retail marketplace and a household name spanning generations. eBay was originally founded to facilitate the resale of pre-owned goods, but has since expanded into a wide array of different markets, sectors, and enthusiast niches.
+              eBay is a global, online retail marketplace and a household name that transcends generations. eBay was originally founded to facilitate the resale of pre-owned goods, but has since expanded into a wide array of different markets, sectors, and enthusiast niches.
             </p>
             <p>
               I joined eBay in the summer of 2023 as a front-end engineer specializing in React. Soon after I started, however, it became clear that the role I had accepted was very different from the one described during interviews. I took this as a challenge, however, and strove at every opportunity to rise to the occasion. Over the course of my time with the company, I worked on a variety of projects&mdash;some of which required me to learn the company&rsquo;s internal front-end framework, Marko, on the fly&mdash;and fulfilled a wide variety of other, full-stack developer functions. I became well-versed in our build pipelines and automation, rewrote test suites from the ground up, and learned the ins and outs of a plethora of internal tools, covering everything from content security policies and feature flags to production debugging and accessibility testing.
