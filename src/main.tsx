@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import './index.scss'
+import Ebay from './pages/Ebay';
 import Heal from './pages/Heal';
 import Home from './pages/Home';
 import Los from './pages/Los';
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: '/heal',
     element: <Heal />,
+  },
+  {
+    path: '/ebay',
+    element: <Ebay />,
   }
 ]);
 

@@ -153,17 +153,13 @@
   }
 }
 
-.palet {
+.ebay {
   .outline {
     stroke: #FFF;
     fill: #000;
 
     :global {
-      #grayscale {
-        display: block;
-      }
-
-      #colors {
+      #e, #b, #a, #y {
         display: none;
       }
     }
@@ -171,7 +167,14 @@
 
   .fill {
     background: white;
-    view-transition-name: palet-card;
+    view-transition-name: ebay-card;
+
+    :global {
+      #e { fill: #E53238; }
+      #b { fill: #0064D2; }
+      #a { fill: #F5AF02; }
+      #y { fill: #86B817; }
+    }
   }
 }
 

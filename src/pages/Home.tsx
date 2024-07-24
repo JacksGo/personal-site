@@ -4,7 +4,7 @@ import MarkusCard from '../components/cards/MarkusCard';
 import LosCard from '../components/cards/LosCard';
 import QuestCard from '../components/cards/QuestCard';
 import HealCard from '../components/cards/HealCard';
-import PaletCard from '../components/cards/PaletCard';
+import EbayCard from '../components/cards/EbayCard';
 
 import styles from './Home.module.scss';
 
@@ -18,7 +18,7 @@ const App = () => {
       <LosCard />
       <MarkusCard />
       <HealCard />
-      <PaletCard />
+      <EbayCard />
     </div>
   </>;
 }
