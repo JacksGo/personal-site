@@ -1,5 +1,5 @@
 body {
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .container {
@@ -98,6 +98,17 @@ body {
       text-decoration: none;
       font-weight: 500;
       transition: background 0.25s ease-in, color 0.25s ease-in;
+
+      &.disabled {
+        cursor: not-allowed;
+        color: rgba(255,255,255,0.25);
+
+        &, &:hover, &:active, &:focus {
+          background: transparent;
+          color: rgba(255,255,255,0.25);
+          border-color: rgba(255,255,255,0.25);
+        }
+      }
 
       @media (prefers-reduced-motion: reduce) {
         background: black;
